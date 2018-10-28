@@ -91,6 +91,12 @@ shipping.push({
 			`;
 			return content;
 		},
+		renderNotFound: function () {
+			this.outputDiv.style.display = 'block';
+				this.outputDiv.innerHTML = `
+					<h1>No result found for your search. Please search with different keyword</h1>
+				`
+		},
 		render: function (arr) {
 			this.outputDiv.style.display = 'block';
 			if (arr.length) {
@@ -100,9 +106,7 @@ shipping.push({
 				})
 				this.outputDiv.innerHTML = result;
 			}else {
-				this.outputDiv.innerHTML = `
-					<h1>No result found for your search. Please search with different keyword</h1>
-				`
+				this.renderNotFound();
 			}
 		},
 		domCached: function () {
@@ -130,18 +134,26 @@ shipping.push({
 		},
 		nameClick: function() {
 			let name = this.nameField.value;
-			let filterResult = this.shipping.filter(el => {
-				return el.name.toLowerCase().indexOf(name.toLowerCase()) > -1 || 
-								el.title.toLowerCase().indexOf(name.toLowerCase()) > -1	||
-								el.excerpt.toLowerCase().indexOf(name.toLowerCase()) > -1
-			} )
-			this.render(filterResult);
+			if (name.length > 1) {
+				let filterResult = this.shipping.filter(el => {
+					return el.name.toLowerCase().indexOf(name.toLowerCase()) > -1 || 
+									el.title.toLowerCase().indexOf(name.toLowerCase()) > -1	||
+									el.excerpt.toLowerCase().indexOf(name.toLowerCase()) > -1
+				} )
+				this.render(filterResult);
+			}else {
+				this.renderNotFound();
+			}
 
 		},
 		numberClick: function () {
 			let number = this.numberField.value;
-			let filterResult = this.shipping.filter(el => el.number.toLowerCase().indexOf(number.toLowerCase()) > -1)
-			this.render(filterResult);
+			if (number.length > 1) {
+				let filterResult = this.shipping.filter(el => el.number.toLowerCase().indexOf(number.toLowerCase()) > -1)
+				this.render(filterResult);
+			}else {
+				this.renderNotFound();
+			}
 		}
 
 
