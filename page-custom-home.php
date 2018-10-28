@@ -4,6 +4,7 @@
  *
  * @package WordPress
  * @subpackage Ships
+ * @author Shibu chandra debnath
  */
 get_header();
 echo get_template_part('content', 'menu');
