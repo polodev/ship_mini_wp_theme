@@ -1,0 +1,171 @@
+/*
+Theme Name: Dev-Ships
+Theme URI: https://wordpress.org
+Author: Shibu deb polo
+Author URI: https://wordpress.org/
+Description: Custom theme for ship container
+Version: 2.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: dev_ships
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+body {
+  background: #444;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#wrapper {
+  width: 1000px;
+  background: white;
+  margin: 0 auto;
+  max-width: 95%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header img,
+img.ship_image {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section {
+  padding: 0 2em 2em;
+}
+
+@media screen and (max-width: 480px) {
+  section {
+    padding: 2em 0;
+  }
+}
+
+p.lh {
+  font-size: 1.25em;
+  line-height: 2.5em;
+}
+
+footer {
+  text-align: center;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2em;
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    maring: 0 1.5em;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  background: #eaeaea;
+}
+
+ul li a {
+  display: block;
+  padding: 6px 10px;
+  font-size: .9em;
+  color: #00b88b;
+  font-family: "PT Sans", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: white;
+  background: #EF7530;
+}
+
+ul li a:focus {
+  color: #f6b48f;
+}
+
+ul li.current-menu-item a {
+  background: #00b88b;
+  color: white;
+}
+
+.input-group {
+  display: grid;
+  margin-bottom: 1em;
+  grid-template-columns: minmax(70px, -webkit-max-content) auto minmax(40px, -webkit-max-content);
+  grid-template-columns: minmax(70px, max-content) auto minmax(40px, max-content);
+}
+
+.input-group .input-group-addon {
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+.input-group .input-group-addon:first-child {
+  border-right: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.input-group input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.input-group input:focus {
+  outline: none;
+  border: 1px solid rgba(0, 184, 139, 0.5);
+}
+
+.input-group button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 100px;
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #357ebd;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+

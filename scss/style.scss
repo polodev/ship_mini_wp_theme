@@ -1,0 +1,20 @@
+/*
+Theme Name: Dev-Ships
+Theme URI: https://wordpress.org
+Author: Shibu deb polo
+Author URI: https://wordpress.org/
+Description: Custom theme for ship container
+Version: 2.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: dev_ships
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import 'variable.scss';
+@import 'global.scss';
+@import 'nav.scss';
+@import 'home.scss';

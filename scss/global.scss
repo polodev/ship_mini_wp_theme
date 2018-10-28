@@ -1,0 +1,33 @@
+body {
+	background: #444;
+	font-family: $font1;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+#wrapper {
+	width: 1000px;
+	background: white;
+	margin: 0 auto;
+	max-width: 95%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+header img, img.ship_image {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+section {
+	padding: 0 2em 2em;
+	@media screen and (max-width: 480px) {
+		padding: 2em 0;
+	}
+}
+p.lh {
+	font-size: 1.25em;
+	line-height: 2.5em;
+}
+footer {
+	text-align: center;
+}

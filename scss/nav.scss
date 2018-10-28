@@ -1,0 +1,42 @@
+nav {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	margin: 2em;
+	@media screen and (max-width: 480px) {
+		maring: 0 1.5em;
+	}
+}
+ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+	background: $navBackground;
+	li {
+		a {
+			display: block;
+			padding: 6px 10px;
+			font-size: .9em;
+			color: $activeColor;
+			font-family: $font2;
+			text-transform: uppercase;
+			text-decoration: none;
+			&:hover  {
+				color: white;
+				background: $hoverColor;
+			}
+			&:focus {
+				color: lighten($hoverColor, 20%);
+			}
+		}
+		&.current-menu-item {
+			a {
+				background: $activeColor;
+				color: white;
+			}
+		}
+
+
+	}
+}
