@@ -115,10 +115,26 @@ shipping.push({
 		bindEvents: function () {
 			this.nameButton.addEventListener('click', this.nameClick.bind(this))
 			this.numberButton.addEventListener('click', this.numberClick.bind(this))
+
+			this.nameField.addEventListener('keyup', (e) => {
+				if ( e.keyCode == 13 ) {
+					this.nameClick()
+			  }
+			})
+			this.numberField.addEventListener('keyup', (e) => {
+				if ( e.keyCode == 13 ) {
+					this.numberClick()
+			  }
+			})
+
 		},
 		nameClick: function() {
 			let name = this.nameField.value;
-			let filterResult = this.shipping.filter(el => el.name.toLowerCase().indexOf(name.toLowerCase()) > -1)
+			let filterResult = this.shipping.filter(el => {
+				return el.name.toLowerCase().indexOf(name.toLowerCase()) > -1 || 
+								el.title.toLowerCase().indexOf(name.toLowerCase()) > -1	||
+								el.excerpt.toLowerCase().indexOf(name.toLowerCase()) > -1
+			} )
 			this.render(filterResult);
 
 		},
