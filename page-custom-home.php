@@ -94,13 +94,14 @@ shipping.push({
 		renderNotFound: function () {
 			this.outputDiv.style.display = 'block';
 				this.outputDiv.innerHTML = `
-					<h1>No result found for your search. Please search with different keyword</h1>
+					<h1 style='color: #EF7530;'>No result found for your search. Please search with different keyword</h1>
 				`
 		},
 		render: function (arr) {
 			this.outputDiv.style.display = 'block';
 			if (arr.length) {
-				let result = ``;
+				let result = `<h2 style='margin-bottom: 2em; color: #EF7530;'>Search Results :</h2>`;
+
 				arr.forEach(singlePost => {
 					result += this.renderSinglePost(singlePost)
 				})
