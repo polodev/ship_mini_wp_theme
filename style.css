@@ -57,6 +57,10 @@ footer {
   text-align: center;
 }
 
+.single-post {
+  border-bottom: 2px solid #ddd;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;

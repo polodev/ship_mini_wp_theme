@@ -43,6 +43,8 @@ function create_posttype() {
   $args =[
       'labels' => $labels,
       'supports' => $supports,
+      'posts_per_page' => 1,
+
       'public' => true,
       'has_archive' => true,
       'menu_icon'            => 'dashicons-calendar-alt',
