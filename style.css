@@ -74,7 +74,7 @@ nav {
 
 @media screen and (max-width: 480px) {
   nav {
-    maring: 0 1.5em;
+    margin: 1.5em 0;
   }
 }
 
